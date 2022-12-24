@@ -1,5 +1,10 @@
 # Football data analysis
 
+This repo uses free data from [StatsBomb](https://statsbomb.com/).
+
+Full match replays, where used, are credited below:
+- [UEFA Women's Euro 2022: Final](https://www.uefa.tv/video/vod/379782/?bucketExId=pnAe&lastSeen=0%3A379782&section=WEURO)
+
 ## Environment setup
 This repo uses `pip-compile` to maintain an up-to-date requirements file. In your environment of choice (I use `virtualenv`), download pip-tools:
 
