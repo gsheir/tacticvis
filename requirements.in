@@ -2,5 +2,6 @@ black
 black[jupyter]
 flake8
 matplotlib
+mplsoccer
 jupyter
 statsbombpy
