@@ -3,7 +3,8 @@ import mplsoccer
 import warnings
 import logging
 
-warnings.simplefilter("ignore")
+def ignore_warnings():
+    warnings.simplefilter("ignore")
 log = logging.getLogger()
 
 logging.basicConfig(level=logging.INFO)
