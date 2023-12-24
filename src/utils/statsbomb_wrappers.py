@@ -2,12 +2,30 @@ from statsbombpy import sb
 import mplsoccer
 import warnings
 import logging
+from enum import Enum
 
 def ignore_warnings():
     warnings.simplefilter("ignore")
 log = logging.getLogger()
 
 logging.basicConfig(level=logging.INFO)
+
+class Competitions:
+    def __init__(self) -> None:
+        self.competitions = sb.competitions()
+        
+    def get_season(self, competition_name, season_name):
+        condition = (self.competitions["competition_name"] == competition_name) & (self.competitions["season_name"] == season_name)
+        season_row = self.competitions.loc[condition]
+        try:
+            season = Season(
+            competition_id=season_row["competition_id"].values[0], 
+            season_id=season_row["season_id"].values[0]
+        )
+            
+        except Exception as e:
+            raise ValueError("Failed to get season, Statsbomb API returned error", e) 
+        return season
 
 class Match:
     def __init__(self, match_id) -> None:
@@ -44,3 +62,26 @@ class Season:
             
         return self.matches.loc[condition]
 
+class PitchDim(Enum):
+    WIDTH = 80
+    HEIGHT = 120
+    
+    DEF_BASELINE = 0
+    ATT_BASELINE = DEF_BASELINE + HEIGHT
+    LEFT_SIDELINE = 0
+    RIGHT_SIDELINE = LEFT_SIDELINE + WIDTH
+    
+    DEF_LCORNER = (DEF_BASELINE, LEFT_SIDELINE)
+    DEF_RCORNER = (DEF_BASELINE, RIGHT_SIDELINE)
+    ATT_LCORNER = (ATT_BASELINE, LEFT_SIDELINE)
+    ATT_RCORNER = (ATT_BASELINE, RIGHT_SIDELINE)
+    
+    LEFT_MIDPOINT = (DEF_BASELINE + HEIGHT / 2, LEFT_SIDELINE)
+    RIGHT_MIDPOINT = (DEF_BASELINE + HEIGHT / 2, RIGHT_SIDELINE)
+    CENTRE = (DEF_BASELINE + HEIGHT / 2, LEFT_SIDELINE + WIDTH / 2)
+    
+    DEF_GOAL_LPOST = (DEF_BASELINE, WIDTH / 2 - 4)
+    DEF_GOAL_RPOST = (DEF_BASELINE, WIDTH / 2 + 4)
+    ATT_GOAL_LPOST = (ATT_BASELINE, WIDTH / 2 - 4)
+    ATT_GOAL_RPOST = (ATT_BASELINE, WIDTH / 2 + 4)
+    
