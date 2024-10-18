@@ -1,8 +1,9 @@
-from statsbombpy import sb
-import mplsoccer
-import warnings
 import logging
+import warnings
 from enum import Enum
+
+import mplsoccer
+from statsbombpy import sb
 
 
 def ignore_warnings():

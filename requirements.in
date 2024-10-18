@@ -4,5 +4,6 @@ django
 flake8
 matplotlib
 mplsoccer
+isort
 jupyter
 statsbombpy
