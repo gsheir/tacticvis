@@ -1,5 +1,5 @@
-black
-black[jupyter]
+black==22.12.0
+black[jupyter]==22.12.0
 django
 flake8
 matplotlib
