@@ -1,5 +1,6 @@
 black
 black[jupyter]
+django
 flake8
 matplotlib
 mplsoccer
