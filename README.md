@@ -59,7 +59,7 @@ docker compose up -d
 
 which will start the database. 
 
-### Running the application
+## Running the application
 
 
 
