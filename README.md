@@ -17,8 +17,19 @@ This repo uses [Dev Containers](https://code.visualstudio.com/docs/devcontainers
 
 To set up your environment, use the Command Palette (Ctrl+Shift+P) in VSCode and select "Dev Containers: Reopen in Container". This will open a new VSCode window and install the neccesary prerequisites.
 
+![Screenshot of reopen in container](https://code.visualstudio.com/assets/docs/devcontainers/create-dev-container/dev-containers-reopen.png)
+
 
 ### Creating your dev environment manually
+
+#### Install Docker and PostgreSQL
+
+- Docker: [installation instructions](https://docs.docker.com/desktop/)
+- PostgreSQL: We deploy the database in a Docker image but you may want to install the PSQL CLI or other tools: [installation instructions](https://www.postgresql.org/download/) 
+
+#### Install Python and packages
+
+We use Python 3.11 and above: [installation instructions](https://www.python.org/downloads/)
 
 This repo uses `pip-compile` to maintain an up-to-date requirements file. In your environment of choice (I use `virtualenv`), download pip-tools:
 
@@ -38,4 +49,21 @@ to generate the `requirements.txt` file. You can then use
 pip install -r requirements.txt
 ``` 
 
-to install the prerequisites.
+to install the prerequisites. Do not commit the `requirements.txt` file.
+
+#### Run the application
+
+Navigate to `./.devcontainer` and run 
+```
+docker compose up -d
+```
+
+which will start the database. 
+
+To run the web app, navigate to `./web_app/tacticvis` and run
+
+```
+python manage.py runserver
+```
+
+The application is now available on `localhost:8000`
