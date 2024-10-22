@@ -1,6 +1,6 @@
 # TacticVis
 
-This repo uses free data from [StatsBomb](https://statsbomb.com/).
+This repo uses free data from [Hudl StatsBomb](https://statsbomb.com/).
 
 Full match replays, where used, are credited below:
 - [UEFA Women's Euro 2022: Final](https://www.uefa.tv/video/vod/379782/?bucketExId=pnAe&lastSeen=0%3A379782&section=WEURO)
@@ -22,12 +22,12 @@ To set up your environment, use the Command Palette (Ctrl+Shift+P) in VSCode and
 
 ### Creating your dev environment manually
 
-#### Install Docker and PostgreSQL
+#### Installing Docker and PostgreSQL
 
 - Docker: [installation instructions](https://docs.docker.com/desktop/)
 - PostgreSQL: We deploy the database in a Docker image but you may want to install the PSQL CLI or other tools: [installation instructions](https://www.postgresql.org/download/) 
 
-#### Install Python and packages
+#### Installing Python and packages
 
 We use Python 3.11 and above: [installation instructions](https://www.python.org/downloads/)
 
@@ -51,14 +51,17 @@ pip install -r requirements.txt
 
 to install the prerequisites. Do not commit the `requirements.txt` file.
 
-#### Run the application
-
+#### Starting the database
 Navigate to `./.devcontainer` and run 
 ```
 docker compose up -d
 ```
 
 which will start the database. 
+
+### Running the application
+
+
 
 To run the web app, navigate to `./web_app/tacticvis` and run
 
