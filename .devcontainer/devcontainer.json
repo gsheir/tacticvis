@@ -3,7 +3,7 @@
 {
 	"name": "TacticVis devcontainer",
 	"dockerComposeFile": "docker-compose.yml",
-	"service": "app",
+	"service": "dev",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
@@ -11,7 +11,7 @@
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// This can be used to network with other containers or the host.
-	"forwardPorts": [8000, 5432],
+	"forwardPorts": [8000, 5433],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": "sh /workspaces/tacticvis/.devcontainer/install.sh",

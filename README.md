@@ -11,13 +11,7 @@ For detailed descriptions of the purpose and design of the product, see our [wik
 
 You may use one of the following methods:
 
-### Using VSCode Dev Containers (recommended)
-
-This repo uses [Dev Containers](https://code.visualstudio.com/docs/devcontainers/containers). Please follow the instructions above to install the extension.
-
-To set up your environment, use the Command Palette (Ctrl+Shift+P) in VSCode and select "Dev Containers: Reopen in Container". This will open a new VSCode window and install the neccesary prerequisites.
-
-![Screenshot of reopen in container](https://code.visualstudio.com/assets/docs/devcontainers/create-dev-container/dev-containers-reopen.png)
+[Set up Dev Containers with Postgres only](docs/setup_dev_container_with_postgres_only.md)
 
 
 ### Creating your dev environment manually
@@ -59,8 +53,7 @@ docker compose up -d
 
 which will start the database. 
 
-## Running the application
-
+### Running the application
 
 
 To run the web app, navigate to `./web_app/tacticvis` and run
