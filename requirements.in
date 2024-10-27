@@ -6,4 +6,5 @@ matplotlib
 mplsoccer
 isort
 jupyter
+psycopg2
 statsbombpy
