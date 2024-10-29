@@ -26,8 +26,6 @@ Run the script
 bash scripts/install_airflow_locally.sh
 ```
 
-You will be prompted to enter a password (we suggest using `admin`).
-
 ## Run Airflow
 
 In one terminal window, run

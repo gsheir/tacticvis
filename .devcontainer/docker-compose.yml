@@ -27,6 +27,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_DB: postgres
       POSTGRES_PASSWORD: postgres
+      AIRFLOW__CORE__DAGS_FOLDER: /workspaces/tacticvis/pipeline/dags
     ports:
       - 5433:5432
     
