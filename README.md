@@ -3,7 +3,7 @@
 This repo uses free data from [Hudl StatsBomb](https://statsbomb.com/).
 
 > [!TIP] 
-> Writeups of the analyses can be found here: [Analysis writeups](docs/analysis/index.md)
+> The individual analyses can be found here: [Analysis pieces](docs/analysis/index.md)
 
 Full match replays, where used, are credited in the respective writeups.
 
