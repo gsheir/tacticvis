@@ -2,24 +2,15 @@
 
 This repo uses free data from [Hudl StatsBomb](https://statsbomb.com/).
 
+[!info] Writeups of the analyses can be found here: [Analysis writeups](docs/analysis/index.md)
+
 Full match replays, where used, are credited below:
 - [UEFA Women's Euro 2022: Final](https://www.uefa.tv/video/vod/379782/?bucketExId=pnAe&lastSeen=0%3A379782&section=WEURO)
 
-For detailed descriptions of the purpose and design of the product, see our [wiki](https://github.com/gsheir/football_analysis/wiki/TacticVis-Wiki-%E2%80%90-Home).
 
 ## Environment setup
 
-You may use one of the following methods:
-
-[Set up Dev Containers with Postgres only](docs/setup_dev_container_with_postgres_only.md)
-
-
 ### Creating your dev environment manually
-
-#### Installing Docker and PostgreSQL
-
-- Docker: [installation instructions](https://docs.docker.com/desktop/)
-- PostgreSQL: We deploy the database in a Docker image but you may want to install the PSQL CLI or other tools: [installation instructions](https://www.postgresql.org/download/) 
 
 #### Installing Python and packages
 
@@ -44,22 +35,3 @@ pip install -r requirements.txt
 ``` 
 
 to install the prerequisites. Do not commit the `requirements.txt` file.
-
-#### Starting the database
-Navigate to `./.devcontainer` and run 
-```
-docker compose up -d
-```
-
-which will start the database. 
-
-### Running the application
-
-
-To run the web app, navigate to `./web_app/tacticvis` and run
-
-```
-python manage.py runserver
-```
-
-The application is now available on `localhost:8000`
