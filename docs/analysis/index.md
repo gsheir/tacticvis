@@ -1,6 +1,6 @@
 # Analysis pieces
 
-Listed from newest to oldest.
+Listed from newest to oldest, in terms of when the analysis was done. 
 
 ## 2020-2021 WSL
 - Comparing shot locations across teams
