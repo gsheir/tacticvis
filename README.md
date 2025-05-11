@@ -2,10 +2,10 @@
 
 This repo uses free data from [Hudl StatsBomb](https://statsbomb.com/).
 
-[!info] Writeups of the analyses can be found here: [Analysis writeups](docs/analysis/index.md)
+> [!TIP] 
+> Writeups of the analyses can be found here: [Analysis writeups](docs/analysis/index.md)
 
-Full match replays, where used, are credited below:
-- [UEFA Women's Euro 2022: Final](https://www.uefa.tv/video/vod/379782/?bucketExId=pnAe&lastSeen=0%3A379782&section=WEURO)
+Full match replays, where used, are credited in the respective writeups.
 
 
 ## Environment setup
