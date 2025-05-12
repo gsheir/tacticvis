@@ -1,4 +1,5 @@
 import pytest
+
 from utils.statsbomb_wrappers import PitchDim
 
 
