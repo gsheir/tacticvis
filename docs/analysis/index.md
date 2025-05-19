@@ -2,6 +2,10 @@
 
 Listed from newest to oldest, in terms of when the analysis was done. 
 
+## 2023 Women's World Cup
+- Analysing the receiving position of midfielders
+  - [Jupyter Notebook](../../src/midfield_receiving.ipynb)
+
 ## 2020-2021 WSL
 - Comparing shot locations across teams
   - [Jupyter Notebook](../../src/wsl_shot_location_analysis.ipynb)
